@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Datagate — Services</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem("datagate-theme");
+        var theme =
+          savedTheme === "light" || savedTheme === "dark"
+            ? savedTheme
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+
+        function fromTag(tag) {
+          tag = String(tag || "").toLowerCase();
+          if (tag.indexOf("ru") === 0) return "ru";
+          if (tag.indexOf("uk") === 0) return "uk";
+          if (tag.indexOf("el") === 0) return "el";
+          if (tag.indexOf("en") === 0) return "en";
+          return null;
+        }
+
+        var savedLocale = localStorage.getItem("datagate-locale");
+        var locale = "en";
+        if (
+          savedLocale === "en" ||
+          savedLocale === "ru" ||
+          savedLocale === "el" ||
+          savedLocale === "uk"
+        ) {
+          locale = savedLocale;
+        } else {
+          var list = (navigator.languages || []).concat(navigator.language || "en");
+          for (var i = 0; i < list.length; i++) {
+            var matched = fromTag(list[i]);
+            if (matched) {
+              locale = matched;
+              break;
+            }
+          }
+        }
+        document.documentElement.lang = locale;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
