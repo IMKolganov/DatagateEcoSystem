@@ -1,6 +1,15 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        VITE_URL_MAIN: ${VITE_URL_MAIN:-https://datagateapp.com}
+        VITE_URL_DASH: ${VITE_URL_DASH:-https://dash.datagateapp.com}
+        VITE_URL_API: ${VITE_URL_API:-https://api.datagateapp.com}
+        VITE_URL_TELEGRAM: ${VITE_URL_TELEGRAM:-https://tg.datagateapp.com}
+        VITE_URL_STATUS: ${VITE_URL_STATUS:-https://status.datagateapp.com}
+        VITE_URL_WAZUH: ${VITE_URL_WAZUH:-https://monitor.datagateapp.com}
+        VITE_URL_GRAFANA: ${VITE_URL_GRAFANA:-https://metrics.datagateapp.com}
     ports:
       - "127.0.0.1:5080:80"
     restart: unless-stopped

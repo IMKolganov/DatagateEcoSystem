@@ -20,11 +20,7 @@ function matchesQuery(item, query, labels) {
 function ServiceTile({ item, labels }) {
   return (
     <li className={`tile tone-${item.tone}${item.featured ? " featured" : ""}`}>
-      <a
-        href={`https://${item.host}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={item.url} target="_blank" rel="noopener noreferrer">
         <span
           className={`tile-icon${item.icon.endsWith(".svg") ? " is-svg" : " is-bitmap"}`}
         >
