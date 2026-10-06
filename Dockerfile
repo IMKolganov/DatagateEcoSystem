@@ -11,6 +11,9 @@ ARG VITE_URL_TELEGRAM=https://tg.datagateapp.com
 ARG VITE_URL_STATUS=https://status.datagateapp.com
 ARG VITE_URL_WAZUH=https://monitor.datagateapp.com
 ARG VITE_URL_GRAFANA=https://metrics.datagateapp.com
+ARG VITE_URL_GITHUB=https://github.com/IMKolganov
+ARG VITE_URL_DOCKERHUB=https://hub.docker.com/u/imkolganov
+ARG VITE_URL_NUGET=https://www.nuget.org/packages/DataGateMonitor.SharedModels
 
 ENV VITE_URL_MAIN=$VITE_URL_MAIN \
     VITE_URL_DASH=$VITE_URL_DASH \
@@ -18,7 +21,10 @@ ENV VITE_URL_MAIN=$VITE_URL_MAIN \
     VITE_URL_TELEGRAM=$VITE_URL_TELEGRAM \
     VITE_URL_STATUS=$VITE_URL_STATUS \
     VITE_URL_WAZUH=$VITE_URL_WAZUH \
-    VITE_URL_GRAFANA=$VITE_URL_GRAFANA
+    VITE_URL_GRAFANA=$VITE_URL_GRAFANA \
+    VITE_URL_GITHUB=$VITE_URL_GITHUB \
+    VITE_URL_DOCKERHUB=$VITE_URL_DOCKERHUB \
+    VITE_URL_NUGET=$VITE_URL_NUGET
 
 RUN npm run build
 

@@ -29,6 +29,10 @@ const dictionaries = {
         title: "Monitoring & security",
         description: "When something breaks or you need to check the system",
       },
+      dev: {
+        title: "Code & packages",
+        description: "GitHub, Docker Hub and NuGet",
+      },
     },
     services: {
       dash: {
@@ -59,6 +63,18 @@ const dictionaries = {
         label: "Grafana",
         hint: "Metrics, charts, load",
       },
+      github: {
+        label: "GitHub",
+        hint: "Source code and repositories",
+      },
+      dockerhub: {
+        label: "Docker Hub",
+        hint: "Container images",
+      },
+      nuget: {
+        label: "NuGet",
+        hint: "Shared .NET packages",
+      },
     },
   },
   ru: {
@@ -79,6 +95,10 @@ const dictionaries = {
       ops: {
         title: "Мониторинг и безопасность",
         description: "Если что-то сломалось или нужно проверить систему",
+      },
+      dev: {
+        title: "Код и пакеты",
+        description: "GitHub, Docker Hub и NuGet",
       },
     },
     services: {
@@ -110,6 +130,18 @@ const dictionaries = {
         label: "Grafana",
         hint: "Метрики, графики, нагрузка",
       },
+      github: {
+        label: "GitHub",
+        hint: "Исходный код и репозитории",
+      },
+      dockerhub: {
+        label: "Docker Hub",
+        hint: "Образы контейнеров",
+      },
+      nuget: {
+        label: "NuGet",
+        hint: "Общие .NET пакеты",
+      },
     },
   },
   el: {
@@ -130,6 +162,10 @@ const dictionaries = {
       ops: {
         title: "Παρακολούθηση & ασφάλεια",
         description: "Όταν κάτι χαλάσει ή πρέπει να ελέγξετε το σύστημα",
+      },
+      dev: {
+        title: "Κώδικας & πακέτα",
+        description: "GitHub, Docker Hub και NuGet",
       },
     },
     services: {
@@ -161,6 +197,18 @@ const dictionaries = {
         label: "Grafana",
         hint: "Μετρήσεις, γραφήματα, φορτίο",
       },
+      github: {
+        label: "GitHub",
+        hint: "Πηγαίος κώδικας και repositories",
+      },
+      dockerhub: {
+        label: "Docker Hub",
+        hint: "Container images",
+      },
+      nuget: {
+        label: "NuGet",
+        hint: "Κοινά πακέτα .NET",
+      },
     },
   },
   uk: {
@@ -181,6 +229,10 @@ const dictionaries = {
       ops: {
         title: "Моніторинг і безпека",
         description: "Якщо щось зламалось або потрібно перевірити систему",
+      },
+      dev: {
+        title: "Код і пакети",
+        description: "GitHub, Docker Hub і NuGet",
       },
     },
     services: {
@@ -211,6 +263,18 @@ const dictionaries = {
       grafana: {
         label: "Grafana",
         hint: "Метрики, графіки, навантаження",
+      },
+      github: {
+        label: "GitHub",
+        hint: "Вихідний код і репозиторії",
+      },
+      dockerhub: {
+        label: "Docker Hub",
+        hint: "Образи контейнерів",
+      },
+      nuget: {
+        label: "NuGet",
+        hint: "Спільні .NET пакети",
       },
     },
   },

@@ -19,6 +19,12 @@ const urls = {
   status: envUrl("VITE_URL_STATUS", "https://status.datagateapp.com"),
   wazuh: envUrl("VITE_URL_WAZUH", "https://monitor.datagateapp.com"),
   grafana: envUrl("VITE_URL_GRAFANA", "https://metrics.datagateapp.com"),
+  github: envUrl("VITE_URL_GITHUB", "https://github.com/IMKolganov"),
+  dockerhub: envUrl("VITE_URL_DOCKERHUB", "https://hub.docker.com/u/imkolganov"),
+  nuget: envUrl(
+    "VITE_URL_NUGET",
+    "https://www.nuget.org/packages/DataGateMonitor.SharedModels"
+  ),
 };
 
 export const sections = [
@@ -87,6 +93,35 @@ export const sections = [
         icon: "/icons/grafana.svg",
         tone: "flame",
         keywords: ["grafana", "metrics", "метрики", "графики", "μετρήσεις"],
+      },
+    ],
+  },
+  {
+    id: "dev",
+    items: [
+      {
+        id: "github",
+        url: urls.github,
+        host: hostFromUrl(urls.github),
+        icon: "/icons/github.svg",
+        tone: "ink",
+        keywords: ["github", "git", "repos", "репозитории", "код", "source"],
+      },
+      {
+        id: "dockerhub",
+        url: urls.dockerhub,
+        host: hostFromUrl(urls.dockerhub),
+        icon: "/icons/docker.svg",
+        tone: "docker",
+        keywords: ["docker", "dockerhub", "images", "контейнеры", "образы"],
+      },
+      {
+        id: "nuget",
+        url: urls.nuget,
+        host: hostFromUrl(urls.nuget),
+        icon: "/icons/nuget.svg",
+        tone: "nuget",
+        keywords: ["nuget", "packages", "пакеты", "dotnet", "sharedmodels"],
       },
     ],
   },

@@ -566,6 +566,24 @@ main {
   --tile-shadow: rgba(244, 104, 0, 0.16);
 }
 
+.tone-ink {
+  --tile-glow: rgba(24, 23, 23, 0.35);
+  --tile-border: rgba(24, 23, 23, 0.35);
+  --tile-shadow: rgba(24, 23, 23, 0.14);
+}
+
+.tone-docker {
+  --tile-glow: rgba(36, 150, 237, 0.4);
+  --tile-border: rgba(36, 150, 237, 0.45);
+  --tile-shadow: rgba(36, 150, 237, 0.16);
+}
+
+.tone-nuget {
+  --tile-glow: rgba(0, 72, 128, 0.4);
+  --tile-border: rgba(0, 72, 128, 0.45);
+  --tile-shadow: rgba(0, 72, 128, 0.16);
+}
+
 @keyframes rise {
   from {
     opacity: 0;

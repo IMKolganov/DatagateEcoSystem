@@ -10,6 +10,9 @@ services:
         VITE_URL_STATUS: ${VITE_URL_STATUS:-https://status.datagateapp.com}
         VITE_URL_WAZUH: ${VITE_URL_WAZUH:-https://monitor.datagateapp.com}
         VITE_URL_GRAFANA: ${VITE_URL_GRAFANA:-https://metrics.datagateapp.com}
+        VITE_URL_GITHUB: ${VITE_URL_GITHUB:-https://github.com/IMKolganov}
+        VITE_URL_DOCKERHUB: ${VITE_URL_DOCKERHUB:-https://hub.docker.com/u/imkolganov}
+        VITE_URL_NUGET: ${VITE_URL_NUGET:-https://www.nuget.org/packages/DataGateMonitor.SharedModels}
     ports:
       - "172.17.0.1:5080:80"
     restart: unless-stopped

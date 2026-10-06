@@ -154,7 +154,7 @@ export default function App() {
               {featured.length > 0 ? (
                 <ul className="tiles featured-row">
                   {featured.map(({ item, labels }) => (
-                    <ServiceTile key={item.host} item={item} labels={labels} />
+                    <ServiceTile key={item.id} item={item} labels={labels} />
                   ))}
                 </ul>
               ) : null}
@@ -162,7 +162,7 @@ export default function App() {
               {regular.length > 0 ? (
                 <ul className="tiles">
                   {regular.map(({ item, labels }) => (
-                    <ServiceTile key={item.host} item={item} labels={labels} />
+                    <ServiceTile key={item.id} item={item} labels={labels} />
                   ))}
                 </ul>
               ) : null}
