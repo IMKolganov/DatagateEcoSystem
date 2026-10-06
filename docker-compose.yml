@@ -11,5 +11,5 @@ services:
         VITE_URL_WAZUH: ${VITE_URL_WAZUH:-https://monitor.datagateapp.com}
         VITE_URL_GRAFANA: ${VITE_URL_GRAFANA:-https://metrics.datagateapp.com}
     ports:
-      - "127.0.0.1:5080:80"
+      - "172.17.0.1:5080:80"
     restart: unless-stopped
